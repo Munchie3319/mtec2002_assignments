@@ -10,7 +10,7 @@ In this exercise, we'll animate a circle so that it moves from the top of the sc
 
 To write this code:
 1. Copy the boilerplate code from the template exercise - hello_pygame.py.
-2. Create three variables above the for loop.  Name them x, y and velocity_y.  Set them to the following values: 
+2. Create three variables above the while loop.  Name them x, y and velocity_y.  Set them to the following values: 
 	x: window_dimensions[0] / 2
 	y: 0
 	velocity_y: 1
@@ -20,3 +20,39 @@ To write this code:
 	c. Use the docs if you need help with calling the function: http://www.pygame.org/docs/ref/draw.html#pygame.draw.circle
 4. Increment your y value by adding velocity_y.
 """
+import pygame
+
+FRAME_RATE = 20
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+WINDOW_TITLE = "My Game"
+
+background_color = (155, 155, 155)
+running = True
+pygame.init()
+
+screen = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+pygame.display.set_caption(WINDOW_TITLE)
+clock = pygame.time.Clock()
+x = WINDOW_WIDTH/2
+y = 0
+velocity_y = 5
+while running == True:
+
+	# stop the main loop when window is closed 
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			running = False
+			
+	screen.fill(background_color)
+
+	# draw everything here!  this line draws a circle in the middle of the screen
+	pygame.draw.circle(screen, (0, 0, 200), (x, y), 10)
+ 	y += velocity_y
+ 	
+ 	
+	clock.tick(FRAME_RATE)
+	pygame.display.flip()
+
+# exit when we're done with the loop
+pygame.quit()

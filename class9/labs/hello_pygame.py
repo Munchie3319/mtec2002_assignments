@@ -26,7 +26,7 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 WINDOW_TITLE = "My Game"
 
-background_color = (255, 255, 255)
+background_color = (155, 155, 155)
 running = True
 pygame.init()
 
@@ -45,7 +45,9 @@ while running == True:
 
 	# draw everything here!  this line draws a circle in the middle of the screen
 	pygame.draw.circle(screen, (0, 0, 200), (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), 10)
- 
+ 	pygame.draw.circle(screen, (15,15,175), (100, 200),20)
+ 	pygame.draw.ellipse(screen, (25,35,60), pygame.Rect (15,15, 30, 10))
+ 	
 	clock.tick(FRAME_RATE)
 	pygame.display.flip()
 
