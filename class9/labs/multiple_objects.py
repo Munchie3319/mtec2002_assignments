@@ -59,9 +59,9 @@ while running == True:
 	screen.fill(background_color)
 	for c in circles:
 		pygame.draw.circle(screen, (0, 0, 200), (c[0],c[1]), 10)
-		c[1]= velocity_y
+		c[1]+= velocity_y
 	# draw everything here!  this line draws a circle in the middle of the screen
-	pygame.draw.circle(screen, (0, 0, 200), (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2), 10)
+
  	
  	
  	
