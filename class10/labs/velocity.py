@@ -35,3 +35,11 @@ distance: 42, time: "asdf"
 I don't think you put in two numbers.
 >
 """
+velocity ={}
+while True:
+	print "Give me a distance"
+	d = raw_input('>')
+	print "Give me a time"
+	t = raw_input('>')
+	print d[velocity]*float(t)
+	
