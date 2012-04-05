@@ -1,5 +1,5 @@
 """
-get_html.py
+
 =====
 Use the requests module to download the contents of a url into a string in your program.
 
@@ -29,3 +29,9 @@ PROGRAM
 7. try a url that you know is missing; what status code do you get?
 8. notice all of the repeated code?  how could we reduce the redundant code?
 """
+import request
+url = ["http://isitchristmas.com","http://emerging-media.info/class/mtec2002/]
+for url in urls:
+	req = request.get(url)
+	print req.text
+	print req.status_code
